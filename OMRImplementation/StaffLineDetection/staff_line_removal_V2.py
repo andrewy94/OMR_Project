@@ -14,7 +14,7 @@ root = tk.Tk()
 root.withdraw()
 
 # Set the initial directory
-initial_directory = '/Users/andrewyan/Desktop/OMRSheetMusicReader/OMRImplementation/datasets/images'
+initial_directory = '/Users/andrewyan/Desktop/OMR_Project/OMRImplementation/datasets/images'
 unmarked = "unmarked"
 
 # Open a file dialog to select an image

@@ -8,7 +8,7 @@ root = tk.Tk()
 root.withdraw()
 
 # Set the initial directory
-initial_directory = '/Users/andrewyan/Desktop/OMRSheetMusicReader/OMRImplementation/datasets/images'
+initial_directory = '/Users/andrewyan/Desktop/OMR_Project/OMRImplementation/datasets/images'
 
 # Open a file dialog to select an image
 file_path = filedialog.askopenfilename(
