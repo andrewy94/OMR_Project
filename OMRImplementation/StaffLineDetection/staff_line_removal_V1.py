@@ -52,12 +52,12 @@ else:
         cv2.imshow('subtract', image_without_lines)
         cv2.waitKey(0)
 
-        # vertical_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,7))
-        # repair_gaps = cv2.morphologyEx(image_without_lines, cv2.MORPH_CLOSE, vertical_kernel)
-        # cv2.imshow('repair', repair_gaps)
-        # cv2.waitKey(0)
+        vertical_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (4,4))
+        repair_gaps = cv2.morphologyEx(image_without_lines, cv2.MORPH_CLOSE, vertical_kernel)
+        cv2.imshow('repair', repair_gaps)
+        cv2.waitKey(0)
 
-        final_image = cv2.bitwise_not(image_without_lines)
+        final_image = cv2.bitwise_not(repair_gaps)
         cv2.imshow('invert', final_image)
         cv2.waitKey(0)
 
