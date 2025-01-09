@@ -52,7 +52,7 @@ else:
         cv2.imshow('subtract', image_without_lines)
         cv2.waitKey(0)
 
-        vertical_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (4,4))
+        vertical_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,5))
         repair_gaps = cv2.morphologyEx(image_without_lines, cv2.MORPH_CLOSE, vertical_kernel)
         cv2.imshow('repair', repair_gaps)
         cv2.waitKey(0)
