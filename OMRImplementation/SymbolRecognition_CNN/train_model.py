@@ -2,14 +2,14 @@ import os
 import shutil
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from keras import layers, models
 
 # === Step 1: Split the Dataset === #
 
 # Define paths
-dataset_dir = "/path/to/your/dataset"  # Path to your dataset
-train_dir = "/path/to/train"           # Path to store training data
-test_dir = "/path/to/test"             # Path to store test data
+dataset_dir = "/Users/andrewyan/Desktop/OMR_datasets/Rebelo Dataset/database/custom"  # Path to your dataset
+train_dir = "/Users/andrewyan/Desktop/OMR_datasets/Rebelo Dataset/database/train"           # Path to store training data
+test_dir = "/Users/andrewyan/Desktop/OMR_datasets/Rebelo Dataset/database/test"             # Path to store test data
 
 # Create training and testing directories
 os.makedirs(train_dir, exist_ok=True)
@@ -96,5 +96,5 @@ print(f"Test Accuracy: {test_acc * 100:.2f}%")
 
 # === Step 7: Save the Model (Optional) === #
 
-model.save('symbol_classification_model.h5')
-print("Model saved as 'symbol_classification_model.h5'")
+model.save('symbol_classification_model.keras')
+print("Model saved as 'symbol_classification_model.keras'")
